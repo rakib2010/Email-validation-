@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email validation check</title>
+</head>
+<body>
+    <form onkeypress="valid()">
+    <h1>Email validation check</h1>
+    <label>Email :</label>
+    <input type="email" id="email" placeholder="Input your email address">
+    <span></span>
+    <br /><br />
+    
+    </form>
+    <script>
+        function valid(){
+            var inputValue = document.getElementById("email").value;
+            var mailFormat = /^([a-zA-Z0-9\.\_])+@([a-zA-Z])+\.([a-z]{2,3})$/;
+                                          
+          
+
+            if (inputValue.match(mailFormat)){
+                document.querySelector("span").innerHTML = inputValue +" = is valid email";
+                document.querySelector("span").style = "color:green";
+
+            }
+            else {
+                document.querySelector("span").innerHTML = inputValue +" = is not valid email";
+                document.querySelector("span").style = "color:red";
+            }
+            
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+</body>
+</html>
